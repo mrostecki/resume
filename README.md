@@ -8,13 +8,9 @@ I created this template as managing a resume on Google Docs was hard and changin
 
 ```sh
 docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex sourabh_bajaj_resume.tex
+docker run --rm -i -v "$PWD":/data latex pdflatex michal_rostecki_resume.tex
 ```
-
-### Preview
-
-![Resume Screenshot](/resume_preview.png)
 
 ### License
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+Format is MIT and based on Sourabh Bajaj's original repository. Data is owned by Michal Rostecki.

@@ -1,0 +1,169 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Michal Rostecki} & Email: \href{mailto:michal.rostecki@gmail.com}{michal.rostecki@gmail.com}\\
+  & Mobile: +49-162-970-7248 \\
+  & \href{https://github.com/mrostecki}{https://github.com/mrostecki} \\
+  & \href{https://build.opensuse.org/users/mrostecki}{https://build.opensuse.org/users/mrostecki} \\
+  & \href{https://www.linkedin.com/in/michal-rostecki-b3968372/}{https://www.linkedin.com/in/michal-rostecki-b3968372/}
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {SUSE}{Remote, Berlin, Germany}
+      {Software Engineer}{Jan 2018 - Present}
+      \resumeItemListStart
+        \resumeItem{\href{https://cilium.io/}{Cilium}}
+          {Open source software which provides networking and security for
+            application containers, using the Linux kernel technology called
+            eBPF. Contributing upstream to \underline{\href{https://github.com/cilium/cilium/pulls/mrostecki}{Cilium}} and \underline{\href{https://lore.kernel.org/bpf/?q=mrostecki\%40opensuse.org}{bpftool}}. Integrating
+            Cilium with SUSE product (SUSE CaaS Platform).}
+        \resumeItem{\href{https://github.com/SUSE/skuba}{SUSE CaaS Platform}}
+          {Kubernetes distribution based on SUSE Enterprise Linux and kubeadm. Responsible for integrating
+            Cilium with SUSE CaaSP. \underline{\href{https://github.com/SUSE/skuba/pulls?q=author\%3Amrostecki}{My contribution}}.}
+        \resumeItem{openSUSE}
+          {Maintaining packages in the distribution: bazel, boringssl,
+            bpftool, c-lightning, firewalld, grpc, libbpf. \underline{\href{https://build.opensuse.org/users/mrostecki}{My activity}}.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Kinvolk}{Berlin, Germany}
+      {Software Engineer}{Dec 2016 - Dec 2017}
+      \resumeItemListStart
+        \resumeItem{rktlet}
+          {Kubernetes runtime server using rkt as a container
+            engine. \underline{\href{https://github.com/kubernetes-retired/rktlet/pulls?q=author\%3Anhlfr}{My
+            contribution}}.}
+        \resumeItem{aws-operator}
+          {Kubernetes operator for deploying the other Kubernetes clusters on
+            Amatzon EC2
+            instances. \underline{\href{https://github.com/giantswarm/aws-operator/pulls?q=author\%3Anhlfr}{My contribution}}.}
+        \resumeItem{Endless OS}
+          {Linux distribution. I was responsible for implementing flatpak
+            images for \underline{\href{https://github.com/endlessm/firefox-flatpak}{Firefox}} and \underline{\href{https://github.com/endlessm/vlc-flatpak}{VLC}}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Mirantis}{Poznan, Poland}
+      {Software Engineer}{Aug 2015 - Nov 2016}
+      \resumeItemListStart
+        \resumeItem{Kubernetes}
+          {\underline{\href{https://bit.ly/3nQ1Fs6}{Upstream contribution}}, mostly bugfixes.}
+        \resumeItem{Virtlet}
+          {Kubernetes runtime server which allows to run virtual machines
+            based on QCOW2 images. Responsible for the initial
+            implementation, responsible for the part which manages virtual
+            machines and images via libvirt. \underline{\href{https://bit.ly/34XDgIE}{My contribution}}.}
+        \resumeItem{OpenStack Kolla}
+          {Project which deploys OpenStack in Docker
+            containers. \underline{\href{https://bit.ly/319lxwI}{Contributed
+              upstream}}. Worked on the
+            \underline{\href{https://opendev.org/x/kolla-mesos/src/commit/a0ffda04aedf02fb2ed10218b87b4ed4eb5aa5f7}{kolla-mesos}}
+            subproject, which was deploying OpenStack on top of Mesos
+            clusters. Implemented multi-node deployment and orchestration of
+            different OpenStack components by roles.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Allegro}{Poznan, Poland}
+      {Cloud Software Engineer}{Nov 2014 - Aug 2015}
+      \resumeItemListStart
+        \resumeItem{OpenStack, OpenContrail}
+          {Deployment, maintenance and bugfixing the OpenStack and
+            OpenContrail cluster. Made contributions to \underline{\href{https://bit.ly/2H1kQP5}{several OpenStack projects}} and \underline{\href{https://bit.ly/3o3ZnWy}{OpenContrail}}.}
+        \item{Developing internal tools integrating internal CI with Mesos and Marathon, written in Python.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+\section{Interests}
+
+Free and Open Source Software, video games, cryptocurrencies, traveling, running, swimming
+
+%-------------------------------------------
+\end{document}
